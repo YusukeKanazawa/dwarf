@@ -1,0 +1,18 @@
+{
+  "name": "dwarf",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "debug": "SET DEBUG=express:* & SET NODE_ENV=develop & node ./bin/www"
+    	
+  },
+  "dependencies": {
+    "express": "4.12.x",
+    "config":"1.90.x",
+    "request": "2.60.x",
+    "body-parser": "1.14.x",
+    "debug": "2.2.x",
+    "ejs": "*"
+  }
+}
