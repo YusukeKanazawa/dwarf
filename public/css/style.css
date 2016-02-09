@@ -1,0 +1,241 @@
+@charset 'UTF-8';
+@import 'animate.css';
+
+/* reset */
+html, body {
+	margin:0;
+	padding:0;
+}
+
+div, nav, section, ul, li, a {
+	box-sizing:border-box;
+}
+body, input{
+	font-family: "游ゴシック", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ＭＳ ゴシック", sans-serif;
+	font-size: 12px;
+	color: #333;
+	background:#FCFCFC;
+}
+
+h1 {
+	margin: 2px 0 0 0;
+	padding: 2px;
+	font-size:17px;
+}
+
+h2 {
+	margin: 2px 0 0 0;
+	padding: 2px;
+	font-size: 14px;
+}
+
+h3 {
+	margin: 2px 0 0 0;
+	padding: 2px;
+	font-size: 12px;
+	
+}
+
+h4{
+	margin: 2px 0 0 0;
+	padding: 2px;
+}
+
+a {
+	color: #333399;	
+	text-decoration: none;
+}
+a:hover {
+	color: #333399;	
+}
+ul{
+	list-style: none;
+}
+
+
+/* frame layout */
+.header-nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 10000;
+	over-flow:hidden;
+	text-align:center;
+	padding:0 1em;
+}
+.header-nav .left {
+	float:left;
+}
+
+.header-nav .right {
+	float:right;
+}
+
+.header-nav a,
+.header-nav h1
+ {
+	margin:2px 0;
+	font-size:12px;
+	padding: 4px;
+}
+.header-nav h1{
+	display: inline-block;
+	
+}
+
+.foot-bar {
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.foot-bar .command {
+	min-height:20px;
+	margin:3px;
+	margin-right:52px;
+	padding:1px 5px;
+	border-radius:2px;
+	background:#FCFCFC;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) inset;
+}
+.foot-bar #send{
+	font-size:12px;
+	margin:3px;
+	float:right;
+	border: 1px solid lightgray;
+	border-radius: 0 3px 3px 0;
+	width:45px;
+	height: 20px;
+}
+
+.content-main {
+	position: relative;
+	margin: 48px auto;
+	width: 100%;
+	max-width: 640px;
+}
+
+.view-container {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+
+/* --listview   */
+.listview {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.listview > li {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid lightgray;
+	
+}
+.listview > li > a {
+    display: block;
+	width: 100%;
+	overflow:hidden;
+	padding:.8em .5em;
+	
+}
+
+.listview > li .badge {
+	float:right;
+	height:20px;
+	min-width:20px;
+	text-align:center;
+}
+
+/* listview--*/
+
+
+/* input-group */
+.input-group {
+	margin: 5px 0 0 0;
+	padding: 3px;
+}
+
+.input-group label{
+	font-size:12px;
+	font-weight: bold;
+}
+.input-group input[type="text"],
+.input-group div[contenteditable="true"],
+.input-group textarea {
+	background: white;
+	padding:3px 5px;
+	border-radius: 2px;
+	border:1px solid lightgray;
+	border-top:1px solid gray;
+	width:100%;
+}
+
+.input-group textarea{
+	height:100px;
+	min-height:28px;
+	resize: vertical;
+}
+
+
+.input-group input[type="text"]{
+	
+}
+/* --------------------------------------------------------
+ * design
+ */
+ 
+ /* -- nav */
+.header-nav{
+	background: linear-gradient(to bottom, rgba(255,255,255,.5), rgba(255,255,255,.95));
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .5);
+}
+.header-nav a {
+	border-radius:3px ;
+}
+.header-nav a:hover {
+	background: linear-gradient(to bottom, rgba(225,225,240,.5), gba(225,225,240,.2));
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) inset;
+}
+
+/* nav -- */
+
+/* -- listview */
+.listview > li:hover{
+	background: #F0F0F0;
+}
+.listview > li a:hover {
+	color:white;
+}
+.listview > li .badge {
+	color:#C0C0C0;
+	border: 1px solid #C0C0C0;
+	border-radius:5px;
+}
+
+/* listview--*/
+
+/* --foot-bar */
+.foot-bar{
+	background: #D0E0FF;
+}
+.foot-bar #send {
+	background: #707EEB;
+	border-radius: 5px;
+	color:#F0F0F0;
+}
+/* foot-bar-- */
+
+/*
+ * animation
+ */
+.view-container.prv.ng-enter { animation: slideInLeft   0.2s both ease-in; z-index: 8888; }
+.view-container.prv.ng-leave { animation: slideOutRight 0.2s both ease-in; z-index: 9999; } 
+.view-container.fwd.ng-enter { animation: slideInRight  0.2s both ease-in; z-index: 8888; }
+.view-container.fwd.ng-leave { animation: slideOutLeft  0.2s both ease-in; z-index: 9999; }
+ 

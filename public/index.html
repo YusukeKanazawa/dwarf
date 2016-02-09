@@ -1,0 +1,31 @@
+<!DOCTYPE html lang="ja">
+<html ng-app="dwarf">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller='containerController'>
+	<nav id="header-nav" class="header-nav">
+		<a ng-click='prv()' href="{{nav.prv}}" class="left">Back</a>
+		<h1 ng-bind="title"></h1>
+		<a ng-click='fwd()' href="{{nav.new}}" class="right">New</a>
+	</nav>
+	
+	<div class="content-main">
+		<div class="view-container {{trns}}" ng-view></div>
+	</div>
+	<div class="foot-bar">
+		<button id="send">Send</button>
+		<div class="command" contenteditable="true">test</div>
+	</div>
+	
+	<!-- MVVM: bootstrap -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-animate.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/dwarf.js"></script>
+</body>

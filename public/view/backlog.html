@@ -1,0 +1,5 @@
+<ul class="listview">
+	<li ng-repeat="issue in issues"><a href="#backlog/{{issue.id}}" ng-click="fwd()">
+		<span class="badge">{{issue.value.labels}}</span>{{issue.value.title}}
+	</a></li>
+</ul>

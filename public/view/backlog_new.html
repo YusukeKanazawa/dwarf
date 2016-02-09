@@ -1,0 +1,15 @@
+<form>
+	<div class="input-group">
+		<label for="title">Title</label><br/>
+		<input type="text" name="title" id="title" ng-model="form.title"></input>
+	</div>
+	<div class="input-group">
+		<label for="label">Label</label><br/>
+		<input type="text" name="label" id="label" ng-model="form.labels"></input>
+	</div>
+	<div class="input-group">
+		<label for="body">Body</label><br/>
+		<textarea name="body" id="body" ng-model="form.body"></textarea>
+	</div>
+ 	<button ng-click="postIssue()">Submit</button>
+</form>

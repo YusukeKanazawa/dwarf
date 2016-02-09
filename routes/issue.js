@@ -23,6 +23,7 @@ exports.create = function(req, res) {
 		 */
   }else{
     var body = req.body;
+    console.log(body);
     issues.create(body.title, body.labels, body.body);
     res.sendStatus(201);
   }
